@@ -90,7 +90,6 @@ select {
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
-  outline: 2px solid red;
 }
 
 .container {
