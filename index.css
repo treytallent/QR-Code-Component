@@ -1,0 +1,162 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  --clr-white: 0, 0%, 100%;
+  --clr-light-gray: 212, 45%, 89%;
+  --clr-gray-blue: 220, 15%, 55%;
+  --clr-dark-blue: 218, 44%, 22%;
+  /* font-sizes */
+  --ff-sans: "Outfit", sans-serif;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  font-size: 0.9375rem;
+  font-family: var(--ff-sans);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+  outline: 2px solid red;
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* colors */
+
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.bg-light-gray {
+  background-color: hsl(var(--clr-light-gray));
+}
+
+.text-dark-blue {
+  color: hsl(var(--clr-dark-blue));
+}
+
+.text-gray-blue {
+  color: hsl(var(--clr-gray-blue));
+}
+
+/* ----------------------------- */
+/* Layout                        */
+/* ----------------------------- */
+
+main {
+  min-height: 100vh;
+  place-items: center;
+}
+
+.qr-card {
+  max-width: 20rem;
+  padding: 1.25em;
+  text-align: center;
+  aspect-ratio: 2 / 3;
+}
+
+.qr-card-title {
+  line-height: 1.1;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.qr-card-title,
+.qr-card-body {
+  margin-inline: 0.15rem;
+}
+.qr-card-img {
+  order: -1;
+}
+.qr-card,
+.qr-card-img {
+  border-radius: 10px;
+}
+
+/* .attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
